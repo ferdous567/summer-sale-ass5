@@ -53,7 +53,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 ">
                 
                 <!-- card one -->
-                <div class="card  bg-base-100 shadow-xl cursor-pointer">
+                <div onclick="clickHandle(this)" class="card  bg-base-100 shadow-xl cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="/images/prod1.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -66,13 +66,13 @@
                             <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                           </div>
                         
-                      <h2 class="card-title">K. Accessories</h2>
+                      <h2 class="card-title">Home Blender</h2>
                       <p>35.00 TK</p>
                       
                     </div>
                   </div>
                 <!-- card two -->
-                <div class="card  bg-base-100 shadow-xl cursor-pointer">
+                <div onclick="clickHandle(this)" class="card  bg-base-100 shadow-xl cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="/images/prod2.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -91,7 +91,7 @@
                     </div>
                   </div>
                 <!-- card three -->
-                <div class="card  bg-base-100 shadow-xl cursor-pointer">
+                <div onclick="clickHandle(this)" class="card  bg-base-100 shadow-xl cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="/images/prod3.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -114,8 +114,8 @@
                     <div class="card bg-base-100 shadow-xl">
                         <div class="card-body">
                           <h2 class="card-title">Have coupon?</h2>
-                          <input class="border 1px solid black" type="text" placeholder="Coupon Code">
-                          <button class="btn btn-secondary ">Apply</button>
+                          <input id="input-apply" class="border 1px solid black" type="text" placeholder="Coupon Code">
+                          <button  id="btn-apply" onclick="applyButton()" class="btn btn-secondary" disabled>Apply</button>
                           
                         </div>
                       </div>
@@ -130,7 +130,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 ">
                 
                 <!-- card one -->
-                <div class="card  bg-base-100 shadow-xl cursor-pointer">
+                <div onclick="clickHandle(this)" class="card  bg-base-100 shadow-xl cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="/images/prod4.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -149,7 +149,7 @@
                     </div>
                   </div>
                 <!-- card two -->
-                <div class="card  bg-base-100 shadow-xl cursor-pointer">
+                <div onclick="clickHandle(this)" class="card  bg-base-100 shadow-xl cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="/images/prod5.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -168,7 +168,7 @@
                     </div>
                   </div>
                 <!-- card three -->
-                <div class="card  bg-base-100 shadow-xl cursor-pointer">
+                <div onclick="clickHandle(this)" class="card  bg-base-100 shadow-xl cursor-pointer">
                     <figure class="px-10 pt-10">
                       <img src="/images/prod6.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -188,11 +188,14 @@
                   </div>
                   <!-- total -->
                   <div>
+                    
                     <div class="card bg-base-100 shadow-xl">
+
                         <div class="card-body">
-                          <p>Total Price: <span>00</span>tk</p>
-                          <p>Discount: <span>00</span>tk</p>
-                          <p>Total: <span>00</span>tk</p>
+                            <p id="total-span"></p>
+                          <p>Total Price: <span id="total-price">00</span>tk</p>
+                          <p>Discount: <span id="discount-price">00</span>tk</p>
+                          <p>Total: <span id="main-total">00</span>tk</p>
                             
                           <button class="btn btn-secondary">Make Purchase</button>
                           
