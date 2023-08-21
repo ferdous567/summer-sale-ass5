@@ -23,19 +23,19 @@ function clickHandle(target){
     
     let btnApply = document.getElementById('btn-apply');
     let makePurchase = document.getElementById('btn-parchase');
-    
-  if(totalPriceDecimal <= 0){
-    makePurchase.disabled = false;
-  }  
+     
 
-else if(totalPriceDecimal >= 200){
-    btnApply.disabled = false;
-}
+    if(totalPriceDecimal >= 200){
+        btnApply.disabled = false;
+    }
 
-else{
-    btnApply.disabled = true;
-}
+    else{
+        btnApply.disabled = true;
+    }
 
+    if(totalPriceDecimal > 0){
+        makePurchase.disabled = false;
+      } 
 
 
 
@@ -55,6 +55,7 @@ function applyButton(){
     else{
         alert('This is wrong coupon number');
     }
+
     inputApply.value = '';
 } 
 
