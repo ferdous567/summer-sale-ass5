@@ -19,13 +19,24 @@ function clickHandle(target){
     const mainTotalPrice = document.getElementById('main-total');
     const totalPriceDecimal = totalPrice.innerText = twoDesimal;
     mainTotalPrice.innerText = twoDesimal;
+    
+    
     let btnApply = document.getElementById('btn-apply');
-if(totalPriceDecimal >= 200){
+    let makePurchase = document.getElementById('btn-parchase');
+    
+  if(totalPriceDecimal <= 0){
+    makePurchase.disabled = false;
+  }  
+
+else if(totalPriceDecimal >= 200){
     btnApply.disabled = false;
 }
+
 else{
     btnApply.disabled = true;
 }
+
+
 
 
 
@@ -38,15 +49,21 @@ function applyButton(){
     if(inputApply.value === 'SELL200'){
         let discount = total * 20/100;
         let discountTotal = total - discount;
-        discountPrice.innerText = discount; 
-        mainTotalPrice.innerText = discountTotal;  
+        discountPrice.innerText = discount.toFixed(2); 
+        mainTotalPrice.innerText = discountTotal.toFixed(2);  
     }
     else{
         alert('This is wrong coupon number');
     }
+    inputApply.value = '';
+} 
 
-    
+    function btnGoHome(){
+        window.location.href = 'index.html';
 
-    
+        
+        
+        
+        
+    }
 
-}

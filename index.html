@@ -43,14 +43,19 @@
           </div>
     </header>
 
+    
+
     <!-- main section -->
     <main class=" bg-[#F8F8F8]">
-        <section class="  w-3/4 mx-auto  ">
-    <div class="">
-        <div>
+        <section>
+            <div class="container mx-auto ">
+                <div class="grid grid-cols-12 gap-8 ">
+    <div class="col-span-8">
+        <!-- container text -->
+        <div >
             <h3 class="pt-20 mb-8 text-2xl font-bold">Kitchenware</h3>
-            <!-- first line card -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 ">
+            <!-- first line container -->
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-3 ">
                 
                 <!-- card one -->
                 <div onclick="clickHandle(this)" class="card  bg-base-100 shadow-xl cursor-pointer">
@@ -109,25 +114,15 @@
                       
                     </div>
                   </div>
-                  <!-- coupon -->
-                  <div>
-                    <div class="card bg-base-100 shadow-xl">
-                        <div class="card-body">
-                          <h2 class="card-title">Have coupon?</h2>
-                          <input id="input-apply" class="border 1px solid black" type="text" placeholder="Coupon Code">
-                          <button  id="btn-apply" onclick="applyButton()" class="btn btn-secondary" disabled>Apply</button>
-                          
-                        </div>
-                      </div>
-                </div>
+                  
 
             </div>
         </div>
-        
+
         <div>
             <h3 class="pt-20 mb-8 text-2xl font-bold">Sportswear</h3>
-            <!-- second line card -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 ">
+            <!-- second line container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8 ">
                 
                 <!-- card one -->
                 <div onclick="clickHandle(this)" class="card  bg-base-100 shadow-xl cursor-pointer">
@@ -186,32 +181,50 @@
                       
                     </div>
                   </div>
-                  <!-- total -->
-                  <div>
-                    
-                    <div class="card bg-base-100 shadow-xl">
-
-                        <div class="card-body">
-                            <p id="total-span"></p>
-                          <p>Total Price: <span id="total-price">00</span>tk</p>
-                          <p>Discount: <span id="discount-price">00</span>tk</p>
-                          <p>Total: <span id="main-total">00</span>tk</p>
-                            
-                          <button class="btn btn-secondary">Make Purchase</button>
-                          
-                        </div>
-                      </div>
-                </div>
+                  
             </div>
         </div>
     </div>
 
-    
-        
-    
 
-    </section>
-        
+    <!-- left side container -->
+
+    <div class="col-span-4 mt-36">
+        <!-- coupon -->
+        <div class="p-4 bg-white mb-5 rounded-lg ">
+            <input id="input-apply" class="border 1px solid black p-3 " type="text" placeholder="Cupon Code">
+            <button  id="btn-apply" onclick="applyButton()" class="btn btn-secondary" disabled>Apply</button>
+        </div>
+
+      <!-- total -->
+      <div class="card bg-base-100 shadow-xl">
+
+        <div class="card-body">
+            <p id="total-span"></p>
+          <p>Total Price: <span id="total-price">00</span>tk</p>
+          <p>Discount: <span id="discount-price">00</span>tk</p>
+          <p>Total: <span id="main-total">00</span>tk</p>
+            
+          <button id="btn-parchase" onclick="my_modal_5.showModal()" class="btn btn-secondary" >Make Purchase</button>
+          
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
+</section>
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+    <form method="dialog" class="modal-box items-center text-center">
+      <img class="items-center mx-auto w-48" src="images/congo.png" alt="">
+      <h3 class="font-bold text-lg">Congratulations</h3>
+      <p class="py-4">Your Purchase the product</p>
+      <div class="modal-action">
+        <!-- if there is a button in form, it will close the modal -->
+        <button onclick="btnGoHome()" class="btn btn-secondary items-center mx-auto w-48">Go Home</button>
+      </div>
+    </form>
+  </dialog> 
         
     </main>
     
